@@ -5,14 +5,14 @@ const rating = document.querySelector(".rating");
 const numberRating = document.querySelector("#number-rating");
 
 number.forEach((item) => {
-  item.addEventListener("click", (Event) => {
+  item.addEventListener("click", () => {
     for (const each of number) {
       if (each.classList.contains("item-background")) {
         each.classList.remove("item-background");
       }
     }
-    Event.target.classList.add("item-background");
-    numberRating.textContent = Event.target.textContent;
+    item.classList.add("item-background");
+    numberRating.textContent = item.textContent;
   });
 });
 button.addEventListener("click", () => {
