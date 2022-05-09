@@ -12,7 +12,7 @@ number.forEach((item) => {
       }
     }
     item.classList.add("item-background");
-    numberRating.textContent = item.textContent;
+    numberRating.innerHTML = item.innerHTML;
   });
 });
 button.addEventListener("click", () => {
